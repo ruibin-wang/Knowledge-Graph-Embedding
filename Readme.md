@@ -24,4 +24,15 @@ pip install --user tensorboard
 pip install --user git+https://github.com/Phlya/adjustText
 ```
 
+2. draw the graph
+```
+# first install graphviz for the system
+windows: https://graphviz.org/download/, add the path to the system path
+ubuntu: sudo apt-get install graphviz
 
+# install graphviz package in the virtual environment 
+pip install graphviz
+```
+
+
+3. dd 

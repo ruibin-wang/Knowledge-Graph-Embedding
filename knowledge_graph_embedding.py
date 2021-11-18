@@ -45,8 +45,8 @@ print('Size of test:', X_test.shape)
 from ampligraph.latent_features import TransE
 
 model = TransE(k=150,                                                             # embedding size
-               epochs=100,                                                        # Num of epochs
-               batches_count= 10,                                                 # Number of batches
+               epochs=1000,                                                        # Num of epochs
+               batches_count= 100,                                                 # Number of batches
                eta=1,                                                             # number of corruptions to generate during training
                loss='pairwise', loss_params={'margin': 1},                        # loss type and it's hyperparameters
                initializer='xavier', initializer_params={'uniform': False},       # initializer type and it's hyperparameters
@@ -59,6 +59,8 @@ model.fit(X_train)
 # metrics
 from ampligraph.utils import save_model, restore_model
 save_model(model, 'TransE-small.pkl')
+
+
 
 
 test_triple = ['harrison ford',
